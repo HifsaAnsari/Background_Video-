@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;box-sizing: border-box;outline: none;}
+        body{background-color: #000;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden;}
+        h1,h2,h3,h4,h5,h6{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+        .wrapper{position: relative; margin-left: 140px;}
+        .wrapper::before{ content: '';position: absolute;top: 0;left: 0;width: 1px;height: 100%;background: linear-gradient( to top,transparent,#fff,transparent);}
+        header{width: calc(100% - 280px); display: flex; position: fixed;top: 0;z-index: 99;}
+       .logo{position: absolute; z-index: 9;margin-top: 32px;}
+       .logo img{ width: 100%;}
+       .menu{ background-color: #3a63c9; width: 100%; transform: scaleX(0); transform-origin: left;transition: all ease 0.7s;} 
+       .menu ul{float: right;margin-right: 60px;}
+       .menu ul li{list-style: none;display: inline-block; margin-left: 48px; line-height: 100px;}
+       .menu ul li a{position: relative; display: inline-block; color: #fff; text-decoration: none; text-transform: uppercase;}
+       .menu ul li a:hover:before{  transform: skewX(-20deg) scaleY(1);}
+       .menu ul li a:before {content: ''; position:absolute; top: 0; left: 10%; width: 120%; height: 100%; background-color: #000;z-index: -1;transform: skewX(-20deg) scaleY(0); transform-origin: top; transition:  all ease 0.5s;}
+       header:hover .menu{transform: scaleX(1);}
+       header:hover menu ul{opacity: 1; transition:  all ease 1s 0.5s;}
+       .content{display: flex;align-items: center; justify-content: space-between; height: 100vh; color: #fff;}
+       .content .text{ max-width: 53%; padding: 0 0 0 50px;}
+     .content h1{font-size: 56px; text-transform: uppercase; margin-bottom: 30px;}
+       .content p{ max-width: 70%;font-size: 16px;line-height: 26px;}
+       .btn{position: relative;display: inline-block;height: 90px;line-height: 90px; text-decoration: none; color: #fff;margin-top: 60px;  transition: all ease 0.5s;padding-left: 110px;opacity: .5;}
+      .btn::before{content: ''; position: absolute; top: 0;left: 0;width: 87px; height: 87px; border: 1px solid #fff; border-radius: 50%; background: url(images/right-arrow.svg) no-repeat; background-size: 14px; background-position: center; transition: all ease 0.5s;}
+      .btn:hover{opacity: 1; padding:0 60px 0 40px; font-size: 18px;}
+      .btn:hover::before{ border-radius: 50px;width: 100%;background-position:195px center;}
+      .video{position: absolute;right: 0;}
+       video{    margin-top: -156%;width:600px ; height: 100vh;object-fit: cover; border-radius: 100% 0 0 100%;}
+  .social{position: absolute;bottom: 50px;}
+  .social a{position: relative;display: inline-block;text-decoration: none;color: #fff; text-transform: uppercase; margin-right: 30px; font-size: 14px; letter-spacing: 1px;padding-bottom: 5px; transition: all ease 0.5s;}
+   .social a::before{content: ''; position: absolute; left: 0;bottom: 0;width: 100%;height: 2px;background-color: #fff; transform: scaleX(0); transform-origin: left; transition: all ease 0.5s 0.3s;}
+   .social a:hover{transform: translateY(-10px);}
+   .social a:hover::before{transform: scaleX(1);}
+   .outside-text{position: fixed;left: -45%; top: 0; height: 90px;width: 100%;transform: rotate(-90deg);z-index: 99;}
+  .outside-text h2 {font-size: 70px;text-transform: uppercase; color: transparent; -webkit-text-stroke-width: 1px ; white-space: nowrap; animation: infinitetext 10s linear infinite; -webkit-text-stroke-color:  #fff;}
+  @keyframes infinitetext {0%{ transform:  translateX(0);}100%{ transform:  translateX(-50%);}}
+
+    </style>
+</head>
+<body>
+    <div class="outside-text">
+        <h2>
+            participate now participate now participate now participate.
+        </h2>
+    </div>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="images/logo.svg" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Winner</a></li>
+                    <li><a href="">Collections</a></li>
+                    <li><a href="">Nominess</a></li>
+                    <li><a href="">Guide</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+<div class="text">
+    <h1>Crestine model in the season</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, placeat eveniet. Vero deleniti, rerum labore odit unde laborum consequatur libero nulla nisi similique, voluptatem aliquam natus hic numquam iure mollitia.</p>
+<a href="#" class="btn">Participate Now</a>
+<div class="social">
+    <a href="">Facebook</a><a href="">Instagram</a><a href="">twitter</a><a href="">Lindedin</a>
+</div>
+</div>
+        </div>
+    </div>
+    <div class="video">
+        <video autoplay loop muted>
+            <source src="images/v3.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>
